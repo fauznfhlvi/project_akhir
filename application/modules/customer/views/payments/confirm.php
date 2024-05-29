@@ -26,8 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row">
             <div class="col-md-12">
             <div class="card card-info">
+                
                     <div class="card card-header">
                     <div class="card-header">
+                   
                         <h5 class="card-heading">Data Pembayaran</h5>
                     </div>
                     <?php echo form_open_multipart('customer/payments/do_confirm'); ?>
@@ -108,14 +110,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <input type="submit" value="Konfirmasi" class="btn btn-primary">
-                    </div>
-                    <div class="card-footer text-right">
                     <tr> 
-                        <h1><a href="#" onclick="window.history.go(-1)" class="btn btn-outline-dark">
-                        <i class="fas fa-fw fa-reply"></i> Kembali</a></h1s> 
-                    </tr>
+                        <a href="#" onclick="window.history.go(-1)"> <input type="submit" value="Batal" class="btn btn-danger"></a>
+                        
+                    
+                        <input type="submit" value="Konfirmasi" class="btn btn-danger">
+                       
+                            </tr>
                     </div>
+                   
                     <?php echo form_close(); ?>
                 </div>
             </div>

@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <nav class="main-header navbar navbar-expand navbar-red navbar-light">
         <ul class="navbar-nav">
           <li class="nav-item">
-          <h3 align="center">Showroom Mobil</h3>
+          <h3 align="text-center">Showroom Mobil Fast Mobilindo</h3>
           </li>
         </ul>
 
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <li class="nav-item dropdown">
     <form class="form-inline ml-3" action="<?php echo site_url('customer/orders/search'); ?>" method="GET">
           <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" value="" name="query" placeholder="Cari order..." aria-label="Search">
+            <input class="form-control form-control-navbar" type="search" value="" name="query" placeholder="Cari di Fast Mobilindo" aria-label="Search">
             <div class="input-group-append">
               <button class="btn btn-navbar" type="submit">
               <i class="fas fa-search"></i>
@@ -69,17 +69,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo site_url('customer/profile'); ?>" class="d-block"><?php echo get_user_name(); ?></a>
         </div>
       </div>
-
+      <hr/> 
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="<?php echo site_url('customer'); ?>" class="nav-link active">
+          <p>
+            <div class="text-bold">
+                HOME
+              </p>
+</div>
+            <a href="<?php echo site_url('customer'); ?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
+             
               <p>
                 Dasbor
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <p>
+          <div class="text-bold">
+                TRANSAKSI
+              </p>
+</div>
+</li>
+
           <li class="nav-item">
             <a href="<?php echo site_url('customer/orders'); ?>" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
@@ -96,6 +110,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <p>
+          <div class="text-bold">
+                MASTER DATA
+              </p>
+</div>
+</li>
           <li class="nav-item">
             <a href="<?php echo site_url('customer/reviews'); ?>" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>

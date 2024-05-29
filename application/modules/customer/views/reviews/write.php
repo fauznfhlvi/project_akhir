@@ -5,22 +5,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
+            <br>
                 <div class="col-sm-6">
-                    <h1>Tulis Review</h1>
+                <ol class="breadcrumb float-sm-left">
+                </ol>
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                <br>
+                
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
                         <li class="breadcrumb-item"><?php echo anchor('customer/reviews', 'Review'); ?></li>
                         <li class="breadcrumb-item active">Tulis Review</li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Tulis Review</h1>
+                  
+                </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="content">
-        <div class="card card-primary">
+    <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
             <?php echo form_open('customer/reviews/write_me'); ?>
             <div class="card-body">
                 <div class="form-group">
@@ -47,17 +59,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
             </div>
-            <div class="card-footer">
-                <input type="submit" value="Tulis Review" class="btn btn-primary">
-            </div>
+            <div class="card-footer text-right">
+                    <tr> 
+                        <a href="#" onclick="window.history.go(-1)"> <input type="submit" value="Batal" class="btn btn-danger"></a>
+                        
+                    
+                        <input type="submit" value="Konfirmasi" class="btn btn-danger">
+                       
+                            </tr>
+                    </div>
             </form>
         </div>
     </section>
             <div class="col-md-4">
-            <tr> 
-                <h1><a href="#" onclick="window.history.go(-1)" class="btn btn-outline-dark">
-                <i class="fas fa-fw fa-reply"></i> Kembali</a></h1> 
-            </tr>
+            
             </div>
 
 </div>

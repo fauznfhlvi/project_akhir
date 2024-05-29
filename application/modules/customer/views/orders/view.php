@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content">
         <div class="row">
             <div class="col-md-8">
-                <div class="card card-primary">
+                <div class="card card-danger">
                     <div class="card-header">
                         <h5 class="card-heading">Data Order</h5>
                     </div>

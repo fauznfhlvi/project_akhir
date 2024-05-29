@@ -5,8 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
+            <br>
                 <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                </ol>
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
                 </div>
+                <br>
                 <br>
                 
                 <div class="col-sm-12">
@@ -30,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php if ( count($orders) > 0) : ?>
                 <div class="table-responsive">
                     <table class="table table-striped m-0">
-                       <tr>
+                       <tr class="bg-danger">
                             <th scope="col">No.</th>
                             <th scope="col">ID</th>
                             <th scope="col">Tanggal</th>
@@ -73,10 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </section>
             <div class="mid">
             <div class="col-md-6">
-                <tr> 
-                <h1><a href="#" onclick="window.history.go(-1)" class="btn btn-outline-dark">
-                <i class="fas fa-fw fa-reply"></i> Kembali</a></h1> 
-                </tr> 
+                
             </div>
             </div>
 

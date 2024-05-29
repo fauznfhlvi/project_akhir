@@ -20,18 +20,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ol class="breadcrumb float-sm-right">
             <h1 class="text-bold">Dasbor</h1>
               </ol>
+             
               <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
-   
+    <br>
+    <br>
     <section class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-10 col-7">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-info">
               <div class="text-center">
                 <h3><?php echo $total_order; ?></h3>
 
@@ -39,6 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
+                <i class="nav-icon fas fa-shopping-cart"></i>
               </div>
               <a href="<?php echo site_url('customer/orders'); ?>" class="small-box-footer">Lihat Order <i class="fas fa-arrow-down"></i></a>
             </div>
@@ -46,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
           <div class="col-lg-10 col-6">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-info">
               <div class="text-center">
                 <h3><?php echo $total_process_order; ?></h3>
 
@@ -54,6 +57,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
+                <i class="nav-icon fas fa-book"></i>
+              
               </div>
               <a href="<?php echo site_url('customer/orders'); ?>" class="small-box-footer">Lihat Order <i class="fas fa-arrow-down"></i></a>
             </div>
@@ -61,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
           <div class="col-lg-10 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-info">
               <div class="text-center">
                 <h3><?php echo $total_payment; ?></h3>
 
@@ -69,6 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
+                <i class="nav-icon fa fa-money-bill"></i>
               </div>
               <a href="<?php echo site_url('customer/payments'); ?>" class="small-box-footer">Lihat Pembayaran <i class="fas fa-arrow-down"></i></a>
             </div>
@@ -84,6 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="icon">
                 <i class="ion ion-car"></i>
+                <i class="nav-icon fa fa-pen"></i>
               </div>
               <a href="<?php echo site_url('customer/reviews'); ?>" class="small-box-footer">Lihat Reviews <i class="fas fa-arrow-down"></i></a>
             </div>

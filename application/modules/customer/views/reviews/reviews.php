@@ -5,11 +5,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
+            <br>
                 <div class="col-sm-6">
-                   
+                <ol class="breadcrumb float-sm-left">
+                </ol>
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
                 </div>
                 <br>
-
+                <br>
                 <div class="col-sm-12"> 
                 <ol class="breadcrumb float-sm-right">
                     <?php echo anchor('customer/reviews/write', '<input type="submit" value="Tambah Review Baru" class="btn btn-danger">'); ?>
@@ -28,7 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </section>
 
     <section class="content">
-        <div class="card card-primary">
+    <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
             <div class="card-body<?php echo ( count($reviews) > 0) ? ' p-0' : ''; ?>">
             <?php if ( count($reviews) > 0) : ?>
                 <div class="table-responsive">
@@ -71,10 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </section>
     <div class="col-md-4">
-            <tr> 
-                <h1><a href="#" onclick="window.history.go(-1)" class="btn btn-outline-dark">
-                <i class="fas fa-fw fa-reply"></i> Kembali</a></h1> 
-            </tr>
+
             </div>
 
 </div>

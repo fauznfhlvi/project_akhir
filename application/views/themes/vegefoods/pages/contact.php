@@ -35,8 +35,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                
                  <p><span class="icon icon-envelope"></span> 
                  <span class="text">fastmobilindo@gmail.com</p></span>
-                 <p><span class="icon icon-envelope"></span> 
-                 <span class="">www.Showroom Mobil.com</p></span>
+                 <div class="text-center">
+                        <div class="breadcrumb-item"> <i class="icon icon-envelope"></i> <?php echo anchor(base_url(), 'www.Showroom Mobil.com'); ?>
+                        </div>
+                 
                  <ul class="ftco-footer-social list-unstyled float-md-center float-lft mt-5"> 
                  <center>
                  <li class="ftco-animate fadeInUp ftco-animated"><a href="https://api.whatsapp.com/send?phone=+628811613088&amp;text=saya ingin melakukan pembelian mobil." target="_BLANK"><span class="fab fa-whatsapp"></span></a></li> 

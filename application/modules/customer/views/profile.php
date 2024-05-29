@@ -5,19 +5,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-          <tr> 
-            <h4><a href="#" onclick="window.history.go(-1)" class="btn btn-outline-dark">
-            <i class="fas fa-fw fa-reply"></i> Kembali</a></h4> 
-          </tr>
-            <h1>Profile</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
-              <li class="breadcrumb-item active">Profile</li>
-            </ol>
-          </div>
+        <br>
+                <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                </ol>
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+                </div>
+                <br>
+                <br>
+                
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
+                        <li class="breadcrumb-item active">Profile</li>
+                    </ol>
+                    <div class="text-center">
+                    <h1>Profile</h1>
+                  
+                </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -47,8 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           <!-- /.col -->
           <div class="col-md-9">
-            <div class="card">
-              <div class="card-header p-2">
+          <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
                 <ul class="nav nav-pills">
                   <li class="nav-item"><a class="nav-link profil active" href="#profile" data-toggle="tab">Profil</a></li>
                   <li class="nav-item"><a class="nav-link akun " href="#akun" data-toggle="tab">Akun</a></li>
