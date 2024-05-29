@@ -6,26 +6,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-
-                    <h1>Order Saya</h1>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
                         <li class="breadcrumb-item active">Order</li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Order Saya</h1>
+                  
                 </div>
             </div>
         </div>
     </section>
 
     <section class="content">
-        <div class="card card-primary">
+    <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
             <div class="card-body<?php echo ( count($orders) > 0) ? ' p-0' : ''; ?>">
             <?php if ( count($orders) > 0) : ?>
                 <div class="table-responsive">
                     <table class="table table-striped m-0">
-                        <tr class="bg-primary">
+                       <tr>
                             <th scope="col">No.</th>
                             <th scope="col">ID</th>
                             <th scope="col">Tanggal</th>

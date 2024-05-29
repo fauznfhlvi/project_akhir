@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    //<title><?php echo $title; ?> | <a href="#">Showroom Mobil</a></title>
+    <title><?php echo $title; ?> | <a href="#">Showroom Mobil</a></title>
   
     <link rel="stylesheet" href="<?php echo get_theme_uri('plugins/fontawesome-free/css/all.min.css', 'adminlte'); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_uri('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css', 'adminlte'); ?>">
@@ -24,10 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <nav class="main-header navbar navbar-expand navbar-red navbar-light">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+          <h3 align="center">Showroom Mobil</h3>
           </li>
         </ul>
 
@@ -49,11 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-white elevation-4">
     <!-- Brand Logo -->
     <a href="<?php echo base_url(); ?>">
       
-      <h3 align="center">Showroom Mobil</h3>
+
     </a>
 	
 	

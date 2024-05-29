@@ -5,17 +5,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-5">
-                    <h1>Pembayaran Saya</h1>
+                <div class="col-sm-6">
+                   
                 </div>
-                <div class="col-sm-2">
-                    <?php echo anchor('customer/payments/confirm', 'Tambah Pembayaran'); ?>
-                </div>
-                <div class="col-sm-5">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-right">
+                    <?php echo anchor('customer/payments/confirm', '<input type="submit" value="Tambah Pembayaran" class="btn btn-danger">'); ?>
+                </ol>
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
                         <li class="breadcrumb-item active">Pembayaran</li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Pembayaran Saya</h1>
+                   
                 </div>
             </div>
         </div>
@@ -27,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php if ( count($payments) > 0) : ?>
                 <div class="table-responsive">
                     <table class="table table-striped m-0">
-                        <tr class="bg-primary">
+                        <tr class="bg-danger">
                             <th scope="col">No.</th>
                             <th scope="col">Order</th>
                             <th scope="col">Tanggal</th>

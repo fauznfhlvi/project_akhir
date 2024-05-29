@@ -6,13 +6,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Konfirmasi Pembayaran</h1>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor('customer', 'Home'); ?></li>
                         <li class="breadcrumb-item active"><?php echo anchor('customer/payments', 'Pembayaran'); ?></li>
                         <li class="breadcrumb-item active">Konfirmasi</li>
+                    </ol>
+                    <div class="text-center">
+                    <h1>Konfirmasi Pembayaran</h1>
                     </ol>
                 </div>
             </div>
@@ -21,8 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <section class="content">
         <div class="row">
-            <div class="col-md-8">
-                <div class="card card-primary">
+            <div class="col-md-12">
+            <div class="card card-info">
+                    <div class="card card-header">
                     <div class="card-header">
                         <h5 class="card-heading">Data Pembayaran</h5>
                     </div>
@@ -115,9 +119,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php echo form_close(); ?>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="card card-info">
                     <div class="card card-header">
+                    <div class="card-header">
                         <h5 class="card-heading">Pembayaran saya</h5>
                     </div>
                     <div class="card-body p-0">

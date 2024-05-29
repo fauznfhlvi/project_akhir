@@ -6,19 +6,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Review Saya</h1>
+                   
                 </div>
-                <div class="col-sm-1"> 
-                    <?php echo anchor('customer/reviews/write', 'Tulis Review Baru'); ?>
-                </div>
-                <div class="col-sm-5">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+
+                <div class="col-sm-12"> 
+                <ol class="breadcrumb float-sm-right">
+                    <?php echo anchor('customer/reviews/write', '<input type="submit" value="Tambah Review Baru" class="btn btn-danger">'); ?>
+</ol>
+
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
                         <li class="breadcrumb-item active">Review</li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Review Saya</h1>
                 </div>
             </div>
         </div>
+</div>
     </section>
 
     <section class="content">
@@ -27,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php if ( count($reviews) > 0) : ?>
                 <div class="table-responsive">
                     <table class="table table-striped m-0">
-                        <tr class="bg-primary">
+                        <tr class="bg-danger">
                             <th scope="col">No.</th>
                             <th scope="col">Order</th>
                             <th scope="col">Tanggal</th>
