@@ -6,14 +6,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Review Order #<?php echo $review->order_number; ?></h1>
+                <ol class="breadcrumb float-sm-left">
+              
+              <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+              </ol>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                <br>
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
                         <li class="breadcrumb-item"><?php echo anchor('customer/reviews', 'Review'); ?></li>
                         <li class="breadcrumb-item active">Order #<?php echo $review->order_number; ?></li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Review Order #<?php echo $review->order_number; ?></h1>
                 </div>
             </div>
         </div>
@@ -21,8 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <section class="content">
      <div class="row">
-      <div class="col-md-8">
-        <div class="card card-primary">
+      <div class="col-md-12">
+      <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
             <div class="card-body p-0">
                 <table class="table table-hover table-striped">
                     <tr>
@@ -45,12 +54,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
+      <ol class="breadcrumb float-sm-right">
         <div class="text-center">
             <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">
                 <i class="fa fa-trash"></i> Hapus
             </a>
         </div>
+</ol>
       </div>
      </div>
     </section>

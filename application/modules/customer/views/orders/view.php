@@ -6,14 +6,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Order #<?php echo $data->order_number; ?></h1>
+                <ol class="breadcrumb float-sm-left">
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+                </ol>
+                    
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                <br>
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor('customer', 'Home'); ?></li>
                         <li class="breadcrumb-item active"><?php echo anchor('customer/orders', 'Order'); ?></li>
                         <li class="breadcrumb-item active">#<?php echo $data->order_number; ?></li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Order #<?php echo $data->order_number; ?></h1>
                 </div>
             </div>
         </div>
@@ -21,8 +28,69 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <section class="content">
         <div class="row">
-            <div class="col-md-8">
-                <div class="card card-danger">
+            <div class="col-md-12">
+            <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
+                    <tr class="bg-danger">
+                        <h5 class="card-heading">Data Penerima</h5>
+</tr>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-hover table-striped table-hover">
+                        <tr>
+                                <td>Nama</td>
+                                <td><b><?php echo $delivery_data->customer->name; ?></b></td>
+                            </tr>
+                            <tr>
+                                <td>No. HP</td>
+                                <td><b><?php echo $delivery_data->customer->phone_number; ?></b></td>
+                            </tr>
+                            <tr>
+                                <td>Alamat</td>
+                                <td><b><?php echo $delivery_data->customer->address; ?></b></td>
+                            </tr>
+                            <tr>
+                                <td>Catatan</td>
+                                <td><b><?php echo $delivery_data->note; ?></b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+          
+
+                <div class="card card-info">
+                    <div class="card card-header">
+                    <div class="card-header">
+                        <h5 class="card-heading">Barang dalam pesanan</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Produk</th>
+                                <th scope="col">Jumlah beli</th>
+                                <th scope="col">Harga satuan</th>
+                            </tr>
+                          <?php foreach ($items as $item) : ?>
+                            <tr>
+                                <td>
+                                    <img class="img img-fluid rounded" style="width: 60px; height: 60px;" alt="<?php echo $item->name; ?>" src="<?php echo base_url('assets/uploads/products/'. $item->picture_name); ?>">
+                                </td>
+                                <td>
+                                    <h5 class="mb-0"><?php echo $item->name; ?></h5>
+                                </td>
+                                <td><?php echo $item->order_qty; ?></td>
+                                <td>Rp <?php echo format_rupiah($item->order_price); ?></td>
+                            </tr>
+                          <?php endforeach; ?>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+            <div class="card card-info">
+                    <div class="card card-header">
                     <div class="card-header">
                         <h5 class="card-heading">Data Order</h5>
                     </div>
@@ -55,63 +123,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </table>
                     </div>
                 </div>
+            
 
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h5 class="card-heading">Barang dalam pesanan</h5>
-                    </div>
-                    <div class="card-body p-0">
-                        <table class="table table-hover table-condensed">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Produk</th>
-                                <th scope="col">Jumlah beli</th>
-                                <th scope="col">Harga satuan</th>
-                            </tr>
-                          <?php foreach ($items as $item) : ?>
-                            <tr>
-                                <td>
-                                    <img class="img img-fluid rounded" style="width: 60px; height: 60px;" alt="<?php echo $item->name; ?>" src="<?php echo base_url('assets/uploads/products/'. $item->picture_name); ?>">
-                                </td>
-                                <td>
-                                    <h5 class="mb-0"><?php echo $item->name; ?></h5>
-                                </td>
-                                <td><?php echo $item->order_qty; ?></td>
-                                <td>Rp <?php echo format_rupiah($item->order_price); ?></td>
-                            </tr>
-                          <?php endforeach; ?>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h5 class="card-heading">Data Penerima</h5>
-                    </div>
-                    <div class="card-body p-0">
-                        <table class="table table-hover table-striped table-hover">
-                            <tr>
-                                <td>Nama</td>
-                                <td><b><?php echo $delivery_data->customer->name; ?></b></td>
-                            </tr>
-                            <tr>
-                                <td>No. HP</td>
-                                <td><b><?php echo $delivery_data->customer->phone_number; ?></b></td>
-                            </tr>
-                            <tr>
-                                <td>Alamat</td>
-                                <td><b><?php echo $delivery_data->customer->address; ?></b></td>
-                            </tr>
-                            <tr>
-                                <td>Catatan</td>
-                                <td><b><?php echo $delivery_data->note; ?></b></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="card card-primary">
+                <div class="card card-info">
+                    <div class="card card-header">
                     <div class="card-header">
                         <h5 class="card-heading">Pembayaran</h5>
                     </div>
@@ -163,7 +178,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
 
-                <div class="card card-primary">
+                <div class="card card-info">
+                    <div class="card card-header">
                     <div class="card-header">
                         <h5 class="card-heading">Tindakan</h5>
                     </div>
@@ -175,14 +191,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#cancelModal"><i class="fa fa-times"></i> Batalkan</a>
                             <?php elseif ($data->order_status == 5) : ?>
                                 <p>Order dibatalkan</p>
-                                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
                             <?php elseif ($data->order_status == 2) : ?>
                                 <p>Order dalam proses</p>
                             <?php elseif ($data->order_status == 3) : ?>
                                 <p>Dalam pengiriman</p>
                             <?php elseif ($data->order_status == 4) : ?>
                                 <p>Order selesai</p>
-                                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
                             <?php endif; ?>
                           <?php elseif ($data->payment_method == 2) : ?>
                             <?php if ($data->order_status == 1) : ?>
@@ -190,12 +206,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#cancelModal"><i class="fa fa-times"></i> Batalkan</a>
                             <?php elseif ($data->order_status == 4) : ?>
                                 <p>Order dibatalkan</p>
-                                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
                             <?php elseif ($data->order_status == 2) : ?>
                                 <p>Dalam pengiriman</p>
                             <?php elseif ($data->order_status == 3) : ?>
                                 <p>Order selesai</p>
-                                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Hapus</a>
                             <?php endif; ?>
                           <?php endif; ?>
                         </div>
@@ -321,3 +337,4 @@ $('.delete-btn').click(function(e) {
 })
 </script>
 <?php endif; ?>
+

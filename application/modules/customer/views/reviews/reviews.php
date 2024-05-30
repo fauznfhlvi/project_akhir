@@ -8,8 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <br>
                 <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
-                </ol>
+              
                 <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+                </ol>
                 </div>
                 <br>
                 <br>

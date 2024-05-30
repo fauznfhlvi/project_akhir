@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </ol>
                     <div class="text-center">
                     <h1>Konfirmasi Pembayaran</h1>
-                    </ol>
+                   
                 </div>
             </div>
         </div>

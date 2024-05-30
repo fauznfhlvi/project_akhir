@@ -6,14 +6,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Pembayaran Order #<?php echo $data->order_number; ?></h1>
+                <ol class="breadcrumb float-sm-left">
+              
+              <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+              </ol>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
+                <br>
+                <br>
+                <div class="col-sm-12">
+                    <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor('customer', 'Home'); ?></li>
                         <li class="breadcrumb-item active"><?php echo anchor('customer/payments', 'Pembayaran'); ?></li>
                         <li class="breadcrumb-item active">Order #<?php echo $data->order_number; ?></li>
                     </ol>
+                    <div class="text-center">
+                    <h1>Pembayaran Order #<?php echo $data->order_number; ?></h1>
                 </div>
             </div>
         </div>
@@ -22,9 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="content">
         <div class="row">
             <div class="col-md-8">
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h5 class="card-heading">Data Order</h5>
+                <div class="card card-info">
+                
+                 
+                    <div class="card-header">Data Order</h5>
                     </div>
                     <div class="card-body p-0">
                         <table class="table table-hover table-striped table-hover">

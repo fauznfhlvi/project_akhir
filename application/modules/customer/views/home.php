@@ -33,6 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row">
           <div class="col-lg-10 col-7">
             <!-- small box -->
+            <div class="text-center">
+            </div>
             <div class="small-box bg-info">
               <div class="text-center">
                 <h3><?php echo $total_order; ?></h3>
