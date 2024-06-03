@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <br>
                 <div class="col-sm-12">
                 <ol class="breadcrumb float-sm-right">
-                    <?php echo anchor('customer/payments/confirm', '<input type="submit" value="Tambah Pembayaran" class="btn btn-danger">'); ?>
+                    <?php echo anchor('customer/payments/confirm', '<input type="submit" value="Tambah Pembayaran Baru" class="btn btn-danger">'); ?>
                 </ol>
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
