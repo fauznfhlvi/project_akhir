@@ -2,20 +2,24 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
     <!-- Header -->
-    <div class="header bg-primary pb-6">
+    <div class="header bg-info pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
+          <div class="col-sm-8">
+                <div class="breadcrumb float-sm-left">
+              
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+</div>
+                </div>
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Kelola Order Customer</h6>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Order</li>
+                  <li class="breadcrumb-item active" aria-current="page">Pesanan</li>
                 </ol>
-              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-left">
+            <h6 class="h2 text-white d-inline-block mb-0">Kelola Pesanan Customer</h6>
             </div>
           </div>
         </div>
@@ -28,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="card">
             <!-- Card header -->
             <div class="card-header">
-              <h3 class="mb-0">Kelola Order</h3>
+              <h3 class="mb-0">Kelola Pesanan</h3>
             </div>
 
             <?php if ( count($orders) > 0) : ?>
@@ -36,8 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="table-responsive">
               <!-- Projects table -->
               <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
+              <thead class="thead-danger">
+              <tr class="bg-danger">
                     <th scope="col">ID</th>
                     <th scope="col">Customer</th>
                     <th scope="col">Tanggal</th>

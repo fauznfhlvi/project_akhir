@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
-                <i class="nav-icon fas fa-book"></i>
+                <i class="nav-icon fas fa-book "></i>
               
               </div>
               <a href="<?php echo site_url('customer/orders'); ?>" class="small-box-footer">Lihat Order <i class="fas fa-arrow-down"></i></a>

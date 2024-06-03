@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a class="dropdown-item" href="<?php echo site_url('customer/payments/confirm'); ?>">Konfirmasi Pembayaran</a>
               </div>
             </li>
+			<li class="nav-item"><a href="<?php echo base_url('#products'); ?>" class="nav-link">Produk</a></li>
 	          <li class="nav-item"><a href="<?php echo site_url('pages/about'); ?>" class="nav-link">Tentang Kami</a></li>
           <li class="nav-item"><a href="<?php echo site_url('pages/contact'); ?>" class="nav-link">Kontak</a></li>
               <li class="nav-item dropdown">

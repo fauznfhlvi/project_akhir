@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-12">
                 <ol class="breadcrumb float-sm-right">
                
-                <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                <a class="navbar-brand" href="<?php echo base_url('#products'); ?>">
                 <input type="submit" value="Tambah Order Baru" class="btn btn-danger">
          </a>
                   

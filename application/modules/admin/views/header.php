@@ -62,23 +62,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                </div>
       
          
-		  
+         
          <div class="ml-auto">
            <!-- Sidenav toggler -->
          </div>
+  
        </div>
+       <br>
+          <br>
        <div class="navbar-inner">
          <!-- Collapse -->
          <div class="collapse navbar-collapse" id="sidenav-collapse-main">
            <!-- Nav items -->
            <ul class="navbar-nav">
              <li class="nav-item">
+            <p>
+            <div class="text-bold">
+              HOME
+              </p>
+</div>
+</li>
+
                <a class="nav-link" href="<?php echo site_url('admin'); ?>">
                  <i class="ni ni-tv-2 text-primary"></i>
                  <span class="nav-link-text">Dasbor</span>
                </a>
              </li>
              <li class="nav-item">
+             <p>
+             <div class="text-bold">
+              MASTER DATA
+              </p>
+</div>
+</li>
               <a class="nav-link" href="<?php echo site_url('admin/products/category'); ?>">
                 <i class="ni ni-bullet-list-67 text-info"></i>
                 <span class="nav-link-text">Kategori Produk</span>
@@ -91,6 +107,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="<?php echo site_url('admin/customers'); ?>">
+                <i class="fa fa-users text-primary"></i>
+                <span class="nav-link-text">Pelanggan</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo site_url('admin/reviews'); ?>">
+                <i class="fa fa-edit text-info"></i>
+                <span class="nav-link-text">Review Pelanggan</span>
+              </a>
+            </li>
+            <li class="nav-item">
+            <p>
+          <div class="text-bold">
+             TRANSAKSI
+              </p>
+</div>
+</li>
               <a class="nav-link" href="<?php echo site_url('admin/orders'); ?>">
                 <i class="fa fa-file-invoice text-danger"></i>
                 <span class="nav-link-text">Pesanan</span>
@@ -101,18 +135,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <a class="nav-link" href="<?php echo site_url('admin/payments'); ?>">
                 <i class="fa fa-money-bill-alt text-warning"></i>
                 <span class="nav-link-text">Pembayaran</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('admin/customers'); ?>">
-                <i class="fa fa-users text-primary"></i>
-                <span class="nav-link-text">Pelanggan</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('admin/reviews'); ?>">
-                <i class="fa fa-edit text-info"></i>
-                <span class="nav-link-text">Review Pelanggan</span>
               </a>
             </li>
             <li class="nav-item">

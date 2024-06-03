@@ -2,22 +2,33 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!-- Header -->
-    <div class="header bg-primary pb-6">
+    <div class="header bg-info pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+           
+          
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Dasbor</h6>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                   <li class="breadcrumb-item active" aria-current="page">Dasbor</li>
                 </ol>
               </nav>
+              
+            </div>
+            <div class="col-lg-6 col-5 text-left">
+            <h6 class="h2 text-white d-inline-block mb-0">Dasbor</h6>
+             
             </div>
           </div>
+          
+            
           <!-- Card stats -->
           <div class="row">
             <div class="col-xl-3 col-md-6">
@@ -26,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
+                      
                       <h5 class="card-title text-uppercase text-muted mb-0">Produk</h5>
                       <span class="h2 font-weight-bold mb-0"><?php echo $total_products; ?></span>
                     </div>

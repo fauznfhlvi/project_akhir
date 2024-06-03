@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </p>
 </div>
             <a href="<?php echo site_url('customer'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-tachometer-alt text-info"></i>
              
               <p>
                 Dasbor
@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <li class="nav-item">
             <a href="<?php echo site_url('customer/orders'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-shopping-cart"></i>
+              <i class="nav-icon fas fa-shopping-cart text-danger"></i>
               <p>
                 Order Saya
               </p>
@@ -104,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url('customer/payments'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-money-bill"></i>
+              <i class="nav-icon fa fa-money-bill text-warning"></i>
               <p>
                 Pembayaran
               </p>
@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </li>
           <li class="nav-item">
             <a href="<?php echo site_url('customer/reviews'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-edit"></i>
+              <i class="nav-icon fa fa-edit text-info"></i>
               <p>
                 Review
               </p>

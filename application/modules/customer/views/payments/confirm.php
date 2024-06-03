@@ -29,7 +29,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
                     <div class="card card-header">
                     <div class="card-header">
-                   
                         <h5 class="card-heading">Data Pembayaran</h5>
                     </div>
                     <?php echo form_open_multipart('customer/payments/do_confirm'); ?>

@@ -21,12 +21,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
             <div class="heading-section-bold mb-4 mt-md-5">
                 <div class="ml-md-0">
-                  <h2 class="mb-4">Selamat Datang <a href="#">Showroom Mobil</a></h2>
+                  <h2 class="mb-4">Selamat Datang <a href="#"> Di Showroom Mobil</a></h2>
               </div>
             </div>
             <div class="pb-md-5">
                 <p><?php echo get_settings('store_description'); ?></p>
-                          <p><a href="<?php echo site_url('browse'); ?>" class="btn btn-danger">Belanja sekarang!</a></p>
+                          <p><a href="<?php echo base_url('#products'); ?>" class="btn btn-danger">Belanja sekarang!</a></p>
                       </div>
                   </div>
               </div>

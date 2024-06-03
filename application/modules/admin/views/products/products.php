@@ -2,16 +2,30 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
     <!-- Header -->
-    <div class="header bg-primary pb-6">
+
+    <div class="header bg-info pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
+          <div class="col-sm-8">
+                <div class="breadcrumb float-sm-left">
+              
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+</div>
+                </div>
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Kelola Produk</h6>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="<?php echo site_url('admin/products/add_new_product'); ?>" class="btn btn-sm btn-neutral">Tambah</a>
-            </div>
+          <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <li class="breadcrumb-item"><a href="<?php echo site_url('admin'); ?>"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Produk</li>
+          </ol>
+     
+      </div>
+      <div class="col-lg-6 col-5 text-left">
+      <h6 class="h2 text-white d-inline-block mb-0">Dasbor</h6>
+      </div>
+      <div class="col-lg-12 col-5 text-right">
+      <a href="<?php echo site_url('admin/products/add_new_product'); ?>" class="btn btn-danger">Tambah Produk</a>
+      </div>
           </div>
         </div>
       </div>
