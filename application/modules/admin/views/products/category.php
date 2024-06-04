@@ -92,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <button type="button" class="btn btn-secondary my-4" data-dismiss="modal">Batal</button>
                           </div>
                           <div class="float-right" style="margin-top: -90px">
-                            <button type="submit" class="btn btn-primary my-4 addPackageBtn">Tambah</button>
+                            <button type="submit" class="btn btn-danger my-4 addPackageBtn">Tambah</button>
                         </div>
                       </form>
                   </div>

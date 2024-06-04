@@ -2,21 +2,25 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
     <!-- Header -->
-    <div class="header bg-primary pb-6">
+    <div class="header bg-info pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
+          <div class="col-sm-8">
+                <div class="breadcrumb float-sm-left">
+              
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+</div>
+                </div>
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Review Order #<?php echo $review->order_number; ?></h6>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                   <li class="breadcrumb-item"><?php echo anchor('admin/reviews', 'Review'); ?></li>
                   <li class="breadcrumb-item active" aria-current="page">Order #<?php echo $review->order_number; ?></li>
                 </ol>
-              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-left">
+            <h6 class="h2 text-white d-inline-block mb-0">Review Order #<?php echo $review->order_number; ?></h6>        
             </div>
           </div>
         </div>
@@ -26,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="card-wrapper">
             <div class="card">
               <div class="card-header">
@@ -54,6 +58,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><b><?php echo $review->review_text; ?></b></td>
                     </tr>
                 </table>
+                <div class="col-md-6">
+      <ol class="breadcrumb float-sm-right">
+        <div class="text-center">
+            <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">
+                <i class="fa fa-trash"></i> Hapus
+            </a>
+        </div>
+</ol>
               </div>
               
             </div>
@@ -61,20 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
 
         </div>
-        <div class="col-md-4">
-            <div class="card card-primary">
-              <div class="card-header">
-                  <h3 class="mb-0">Tindakan</h3>
-              </div>
-              <div class="card-body">
-              <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">
-                <i class="fa fa-trash"></i> Hapus
-            </a>
-              </div>
-              
-            </div>
-        </div>
-      </div>
+        
 
       <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -86,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </button>
       </div>
       <div class="modal-body">
-        <p class="deleteText">Anda yakin ingin menghapus review?</p>
+        <p class="deleteText"> Apakah Anda yakin ingin menghapus review ini?</p>
       </div>
       <div class="modal-footer">
       <?php echo anchor('admin/reviews/delete/'. $review->id, 'Hapus', array('class' => 'btn btn-danger')); ?>

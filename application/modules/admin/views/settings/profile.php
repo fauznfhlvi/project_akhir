@@ -2,21 +2,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
     <!-- Header -->
-    <div class="header bg-primary pb-6">
+    <div class="header bg-info pb-6">
         <div class="container-fluid">
           <div class="header-body">
             <div class="row align-items-center py-4">
               <div class="col-lg-6 col-7">
-                <h6 class="h2 text-white d-inline-block mb-0">Profil Saya</h6>
-              </div>
-              <div class="col-lg-6 col-5 text-right">
-                  <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                         <li class="breadcrumb-item"><a href="<?php echo site_url('admin'); ?>"><i class="fas fa-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="<?php echo site_url('admin/settings'); ?>">Pengaturan</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Profil</li>
                       </ol>
-                    </nav>
+              </div>
+              <div class="col-lg-6 col-5 text-left">
+                  
+              <h6 class="h2 text-white d-inline-block mb-0">Profil Saya</h6>   
+                   
               </div>
             </div>
           </div>
@@ -93,6 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
   
           </div>
+          
           <div class="col-md-4">
             <div class="card card-profile">
                 <img src="<?php echo get_admin_image(); ?>" alt="<?php echo get_admin_name(); ?>" class="card-img-top">

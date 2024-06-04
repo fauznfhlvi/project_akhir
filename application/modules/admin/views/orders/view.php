@@ -2,21 +2,26 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
     <!-- Header -->
-    <div class="header bg-primary pb-6">
+    <div class="header bg-info pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
+          <div class="col-sm-8">
+                <div class="breadcrumb float-sm-left">
+              
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+</div>
+                </div>
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Order #<?php echo $data->order_number; ?></h6>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="<?php echo site_url('admin'); ?>"><i class="fas fa-home"></i></a></li>
                   <li class="breadcrumb-item"><a href="<?php echo site_url('admin/orders'); ?>">Order</a></li>
                   <li class="breadcrumb-item active" aria-current="page">#<?php echo $data->order_number; ?></li>
                 </ol>
-              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-left">
+             
+            <h6 class="h2 text-white d-inline-block mb-0">Order #<?php echo $data->order_number; ?></h6> 
             </div>
           </div>
         </div>
@@ -27,10 +32,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container-fluid mt--6">
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="card-wrapper">
             <div class="card">
-              <div class="card-header">
+            <div class="card-header">
+                    <h3 class="mb-0">Data Penerima</h3>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table align-items-center table-flush table-hover">
+                        <tr>
+                            <td>Nama</td>
+                            <td><b><?php echo $delivery_data->customer->name; ?></b></td>
+                        </tr>
+                        <tr>
+                            <td>No. HP</td>
+                            <td><b><?php echo $delivery_data->customer->phone_number; ?></b></td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td><div style="white-space: initial;"><b><?php echo $delivery_data->customer->address; ?></b></div></td>
+                        </tr>
+                        <tr>
+                            <td>Catatan</td>
+                            <td><b><?php echo $delivery_data->note; ?></b></td>
+                        </tr>
+                    </table>
+</div>
+             
+            
+            <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="mb-0">Barang dalam pesanan</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table align-items-center table-flush">
+                        <tr class="bg-danger">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Produk</th>
+                                <th scope="col">Jumlah beli</th>
+                                <th scope="col">Harga satuan</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          <?php foreach ($items as $item) : ?>
+                            <tr>
+                                <td>
+                                    <img class="img img-fluid rounded" style="width: 60px; height: 60px;" alt="<?php echo $item->name; ?>" src="<?php echo base_url('assets/uploads/products/'. $item->picture_name); ?>">
+                                </td>
+                                <td>
+                                    <h5 class="mb-0"><?php echo $item->name; ?></h5>
+                                </td>
+                                <td><?php echo $item->order_qty; ?></td>
+                                <td>Rp <?php echo format_rupiah($item->order_price); ?></td>
+                            </tr>
+                          <?php endforeach; ?>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+          </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="card card-primary">
+            <div class="card-header">
                 <h3 class="mb-0">Data Produk</h3>
                 <?php if ($order_flash) : ?>
                 <span class="float-right text-success font-weight-bold" style="margin-top: -30px;"><?php echo $order_flash; ?></span>
@@ -90,76 +157,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="col-md-2">
                       <div class="text-right">
-                        <input type="submit" value="OK" class="btn btn-md btn-primary">
+                        <input type="submit" value="OK" class="btn btn-md btn-danger">
                       </div>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-            
-            <div class="card card-primary">
-                    <div class="card-header">
-                        <h3 class="mb-0">Barang dalam pesanan</h3>
-                    </div>
-                    <div class="card-body p-0">
-                        <table class="table align-items-center table-flush">
-                          <thead class="thead-light">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Produk</th>
-                                <th scope="col">Jumlah beli</th>
-                                <th scope="col">Harga satuan</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                          <?php foreach ($items as $item) : ?>
-                            <tr>
-                                <td>
-                                    <img class="img img-fluid rounded" style="width: 60px; height: 60px;" alt="<?php echo $item->name; ?>" src="<?php echo base_url('assets/uploads/products/'. $item->picture_name); ?>">
-                                </td>
-                                <td>
-                                    <h5 class="mb-0"><?php echo $item->name; ?></h5>
-                                </td>
-                                <td><?php echo $item->order_qty; ?></td>
-                                <td>Rp <?php echo format_rupiah($item->order_price); ?></td>
-                            </tr>
-                          <?php endforeach; ?>
-                          </tbody>
-                        </table>
-                    </div>
-                </div>
-            
-          </div>
-
-        </div>
-        <div class="col-md-4">
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h3 class="mb-0">Data Penerima</h3>
-                </div>
-                <div class="card-body p-0">
-                    <table class="table align-items-center table-flush table-hover">
-                        <tr>
-                            <td>Nama</td>
-                            <td><b><?php echo $delivery_data->customer->name; ?></b></td>
-                        </tr>
-                        <tr>
-                            <td>No. HP</td>
-                            <td><b><?php echo $delivery_data->customer->phone_number; ?></b></td>
-                        </tr>
-                        <tr>
-                            <td>Alamat</td>
-                            <td><div style="white-space: initial;"><b><?php echo $delivery_data->customer->address; ?></b></div></td>
-                        </tr>
-                        <tr>
-                            <td>Catatan</td>
-                            <td><b><?php echo $delivery_data->note; ?></b></td>
-                        </tr>
-                    </table>
+                
                 </div>
             </div>
-
+            </div>
+            <div class="col-md-12">
                 <div class="card card-primary" id="#payments">
                     <div class="card-header">
                         <h3 class="mb-0">Pembayaran</h3>
@@ -245,7 +254,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </select>
                             </div>
                             <div class="col-md-3 text-right">
-                                <input type="submit" class="btn btn-primary" value="OK">
+                                <input type="submit" class="btn btn-danger" value="OK">
                             </div>
                         </div>
                         </form>

@@ -60,8 +60,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
+				
                 <a class="dropdown-item" href="<?php echo site_url('shop/cart'); ?>">Keranjang Belanja</a>
+				<div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?php echo site_url('customer/payments/confirm'); ?>">Konfirmasi Pembayaran</a>
+				
               </div>
             </li>
 			<li class="nav-item"><a href="<?php echo base_url('#products'); ?>" class="nav-link">Produk</a></li>
@@ -77,7 +80,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  <a class="dropdown-item" href="<?php echo site_url('auth/logout'); ?>">Logout</a>
 				  <?php else : ?>
               	  <a class="dropdown-item" href="<?php echo site_url('auth/login'); ?>">Masuk Log</a>
+				    <div class="dropdown-divider"></div>
 				  <a class="dropdown-item" href="<?php echo site_url('auth/register'); ?>">Daftar</a>
+				 
 				  <?php endif; ?>
               </div>
             </li>

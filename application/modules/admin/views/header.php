@@ -42,6 +42,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                  </div>
               
                </a>
+               <ul class="ml-auto ml-md-12"></ul>
+               <div class="dropdown-divider"></div>
+
                <div class="dropdown-menu dropdown-menu-left">
                  <div class="dropdown-header noti-title">
                    <h6 class="text-overflow m-0">Welcome!</h6>

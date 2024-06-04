@@ -133,14 +133,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col-xl-8">
           <div class="card bg-default">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h6 class="text-light text-uppercase ls-1 mb-1">Ringkasan</h6>
-                  <h5 class="h3 text-white mb-0">Penjualan</h5>
+              <div class="card-header bg-transparent">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-light text-uppercase ls-1 mb-1">Ringkasan</h6>
+                    <h5 class="h3 text-white mb-0">Penjualan</h5>
+                  </div>
                 </div>
               </div>
-            </div>
             <div class="card-body">
               <!-- Chart -->
               <div class="chart">
