@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container-fluid mt--6">
       <?php echo form_open_multipart('admin/products/add_product'); ?>
 
-      <div class="row">
+      <div class="row alert alert-primary">
         <div class="col-md-12">
           <div class="card-wrapper">
             <div class="card">
@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </span>
                 <?php endif; ?>
               </div>
-        
+            
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">

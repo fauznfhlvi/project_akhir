@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Page content -->
     <div class="container-fluid mt--6">
-      <div class="row">
+      <div class="row alert alert-primary">
         <div class="col-md-12">
           <div class="card-wrapper">
             <div class="card">

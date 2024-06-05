@@ -6,17 +6,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
+          <div class="col-sm-8">
+                <div class="breadcrumb float-sm-left">
+              
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+</div>
+                </div>
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0"><?php echo $customer->name; ?></h6>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                   <li class="breadcrumb-item"><?php echo anchor('admin/customers', 'Pelanggan'); ?></li>
                   <li class="breadcrumb-item active" aria-current="page"><?php echo $customer->name; ?></li>
                 </ol>
-              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-left">
+             
+            <h6 class="h2 text-white d-inline-block mb-0"><?php echo $customer->name; ?></h6>
+             
             </div>
           </div>
         </div>
@@ -25,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Page content -->
     <div class="container-fluid mt--6">
-      <div class="row">
+      <div class="row  alert alert-primary">
         <div class="col-md-5">
           <div class="card-wrapper">
             <div class="card">

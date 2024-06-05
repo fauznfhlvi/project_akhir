@@ -6,6 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
           <div class="header-body">
             <div class="row align-items-center py-4">
+            <div class="col-sm-8">
+                <div class="breadcrumb float-sm-left">
+              
+                <a href="#" onclick="window.history.go(-1)"><i class="fas fa-arrow-left"></i></a>
+</div>
+                </div>
               <div class="col-lg-6 col-7">
               <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                         <li class="breadcrumb-item"><a href="<?php echo site_url('admin'); ?>"><i class="fas fa-home"></i></a></li>
@@ -27,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container-fluid mt--6">
         <?php echo form_open_multipart('admin/settings/profile_update'); ?>
           
-        <div class="row">
+        <div class="row alert alert-primary">
           <div class="col-md-8">
             <div class="card-wrapper">
               <div class="card">

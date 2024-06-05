@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <?php echo form_open_multipart('admin/products/edit_product'); ?>
       <input type="hidden" name="id" value="<?php echo $product->id; ?>">
 
-      <div class="row">
+      <div class="row  alert alert-primary">
         <div class="col-md-12">
           <div class="card-wrapper">
             <div class="card">
@@ -154,12 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <li class="nav-item">
                                     <a class="nav-link p-1 active" id="pills-current-tab" data-toggle="pill" href="#pills-current" role="tab" aria-controls="pills-home" aria-selected="true">Current</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link p-1" id="pills-edit-tab" data-toggle="pill" href="#pills-edit" role="tab" aria-controls="pills-profile" aria-selected="false">Ganti</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link p-1" id="pills-delete-tab" data-toggle="pill" href="#pills-delete" role="tab" aria-controls="pills-contact" aria-selected="false">Hapus</a>
-                                </li>
+                               
                             </ul>
                         </div>
                         <?php endif; ?>
@@ -197,8 +192,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php endif; ?>
                 </div>
                 <div class="card-footer text-right">
-                    <input type="submit" value="Simpan" class="btn btn-primary">
+                    <input type="submit" value="Simpan" class="btn btn-danger">
+                    <a class="nav-link p-1" id="pills-edit-tab" data-toggle="pill" href="#pills-edit" role="tab" aria-controls="pills-profile" aria-selected="false"> <input type="submit" value="Edit" class="btn btn-danger"></a>
+                    <a class="nav-link p-1" id="pills-delete-tab" data-toggle="pill" href="#pills-delete" role="tab" aria-controls="pills-contact" aria-selected="false"> <input type="submit" value="Hapus" class="btn btn-danger"></a>
                 </div>
+               
+               
+                
+                                  
+ 
+                                
+                               
+                            
+                                
+
             </div>
         </div>
       </div>
