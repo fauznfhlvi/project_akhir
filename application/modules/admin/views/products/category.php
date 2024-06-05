@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            
             </div>
             <div class="col-lg-6 col-5 text-left">
-            <h6 class="h2 text-white d-inline-block mb-0">Dasbor</h6>
+            <h6 class="h2 text-white d-inline-block mb-0">Kategori Produk</h6>
             </div>
             <div class="col-lg-12 col-5 text-right">
             <a href="#" data-target="#addModal" data-toggle="modal" class="btn btn-danger">Tambah  Kategori Produk</a>

@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
             <div class="card">
               <div class="card-body  d-none d-md-block">
-                <input type="submit" class="btn btn-primary float-right" value="Simpan">
+                <input type="submit" class="btn btn-danger float-right" value="Simpan">
               </div>
             </div>
   

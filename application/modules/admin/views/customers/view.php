@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row  alert alert-primary">
-        <div class="col-md-5">
+        <div class="col-md-12">
           <div class="card-wrapper">
             <div class="card">
               <div class="card-header">
@@ -64,9 +64,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><b><?php echo get_formatted_date($customer->register_date); ?></b></td>
                     </tr>
                 </table>
-              </div>
-              <div class="card-footer">
-                <a href="#" data-id="<?php echo $customer->id; ?>" class="btn btn-danger btn-sm btnDelete"><i class="fa fa-trash"></i></a>
+              </div> 
+             
+           <br>
+              <div class="text-center">
+                <a href="#" data-id="<?php echo $customer->id; ?>" class="btn btn-danger btn-sm btnDelete">Hapus<i class="fa fa-trash"></i></a>
               </div>
               
             </div>
@@ -74,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
 
         </div>
-        <div class="col-md-7">
+        <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
                     <h3 class="mb-0">Riwayat Order</h3>
