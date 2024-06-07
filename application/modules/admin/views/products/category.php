@@ -45,6 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="card-header border-0">
               <h3 class="mb-0">Kategori Produk</h3>
             </div>
+</div>
 
             <div class="packageContainer">
             <!-- Light table -->

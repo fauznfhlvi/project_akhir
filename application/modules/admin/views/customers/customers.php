@@ -27,14 +27,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
-      <div class="row alert alert-primary">
+    <div class="row alert alert-primary">
         <div class="col">
           <div class="card">
             <!-- Card header -->
             <div class="card-header">
               <h3 class="mb-0">Pelanggan</h3>
             </div>
-
+</div>
             <div class="card-body p-0">
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush" id="customerList" style="width: 100%">
@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
-
+      
       <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
   <div class="modal-dialog modal-modal-dialog-centered modal-" role="document">
       <div class="modal-content">

@@ -14,6 +14,7 @@
             <div class="col-lg-6 col-7">
             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item active" aria-current="page">LAPORAN</li>
                   <li class="breadcrumb-item active" aria-current="page">Laporan Penjualan</li>
                 </ol>
             </div>

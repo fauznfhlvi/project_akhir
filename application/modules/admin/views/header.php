@@ -148,6 +148,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="nav-link-text">Laporan Penjualan</span>
               </a>
               <br>
+             
+              <a class="nav-link" href="<?php echo site_url('admin/laporan/laporan_pembayaran'); ?>">
+                <i class="fa fa-book text-book"></i>
+                <span class="nav-link-text">Laporan Pembayaran</span>
+              </a>
+           
             
                   
           
